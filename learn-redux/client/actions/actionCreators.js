@@ -1,11 +1,11 @@
 // increment likes
-export function increment([], index)
+export function increment(index)
 {
     return function (dispatch){
         return dispatch({
-            type: 'INCREMENT_LIKES', 
-            index
-        })
+        type: 'INCREMENT_LIKES', 
+        index
+    })
     }
 }
 
@@ -13,8 +13,8 @@ export function increment([], index)
 // add comment
 export function addComment(postId, author, comment)
 {
-    return 
-    {
+    console.log("ADD COMMENT")
+    return {
         type: 'ADD_COMMENT',
         postId,
         author,
@@ -25,8 +25,7 @@ export function addComment(postId, author, comment)
 // remove comment
 export function removeComment(postId, i)
 {
-    return
-    {
+    return{
         type: 'REMOVE_COMMENT',
         postId,
         i

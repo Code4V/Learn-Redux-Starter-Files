@@ -7,9 +7,10 @@ function posts(state = [], action)
     {
         case 'INCREMENT_LIKES' :
             const i = action.index;
+            console.log(i)
             return [
                 ...state.slice(0, i),
-                {...state[o], likes: state[i].likes + 1},
+                {...state[i], likes: state[i].likes + 1},
                 ...state.slice(i + 1),
             ]
         

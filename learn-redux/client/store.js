@@ -1,5 +1,5 @@
-import { createStore, compse, applyMiddleware } from 'redux';
-import { thunk } from 'redux-thunk';
+import { createStore, compse, applyMiddleware, combineReducers } from 'redux';
+import * as thunk from 'redux-thunk';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { browserHistory } from 'react-router';
 
@@ -13,8 +13,10 @@ const defaultState = {
     comments
 };
 
-const store = createStore(rootReducer, defaultState);
+const store = createStore(rootReducer,defaultState, applyMiddleware(thunk.default));
 
 export const history = syncHistoryWithStore(browserHistory, store);
 
 export default store;
+
+//TEST
