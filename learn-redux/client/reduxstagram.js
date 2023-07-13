@@ -14,6 +14,12 @@ import { Provider } from 'react-redux';
 
 import store, { history } from './store';
 
+//ERROR LOGGING
+// import Raven from 'raven-js';
+// import { sentry_url, logException } from './data/config';
+
+// Raven.config(sentry_url).install();
+
 const router = (
     <Provider store={ store }>
         <Router history={history}>
@@ -21,7 +27,7 @@ const router = (
                 <IndexRoute component={PhotoGrid}></IndexRoute>
                 <Route path="/view/:postId" component={Single}></Route>
             </Route>
-
+          
         </Router>
     </Provider>
 )

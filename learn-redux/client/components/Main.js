@@ -6,7 +6,7 @@ const Main = React.createClass({
         return (
             <div>
                 <h1>
-                    <Link to="/"> InstaVash </Link>
+                    <Link to="/"> Renztagram </Link>
                     
                 </h1>
 
